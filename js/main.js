@@ -1,22 +1,3 @@
-// header - 검색창
-
-const searchEl = document.querySelector('.search');
-const searchInputEl = searchEl.querySelector('input');
-
-searchEl.addEventListener('click', function (){
-  searchInputEl.focus();
-});
-
-searchInputEl.addEventListener('focus', function (){
-  searchEl.classList.add('focused');
-  searchInputEl.setAttribute('placeholder', '통합검색');
-});
-searchInputEl.addEventListener('blur', function (){
-  searchEl.classList.remove('focused');
-  searchInputEl.setAttribute('placeholder', '');
-});
-
-
 // header - badge숨기기 + to-top 보이기
 const badgeEl = document.querySelector('header .badges');
 const toTopEl = document.querySelector('#to-top');
@@ -162,9 +143,3 @@ new Swiper(".awards .swiper-container", {
   autoplay: true, // 자동 재생 여부
   loop: true // 반복 재생 여부
 });
-
-
-// footer - this year
-const thisYear = document.querySelector('.this-year');
-thisYear.textContent = new Date().getFullYear();
-
